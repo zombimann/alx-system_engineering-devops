@@ -1,0 +1,3 @@
+#!/bin/bash
+eclare -l _path="/"
+echo $(dirCount "$_path")

@@ -1,4 +1,2 @@
 #!/bin/bash
-dirCount() { echo $(find "$1"* -maxdepth 0 -type d | wc -l); }
-declare -l _path="/"
-echo $(dirCount "$_path")
+echo $PATH| tr ':' ' ' | wc -w
