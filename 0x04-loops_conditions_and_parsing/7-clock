@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#  7-clock: This script displays the time for 12 hours and 59 minutes
+
+hour=0
+minute=0
+
+while [ $hour -lt 12 ]
+do
+	if [ $((minute % 59)) -eq 0 ]
+	then
+	   minute=0
+	   echo "Hour: $hour"
+	   hour=$((hour+1))
+	fi
+	minute=$((minute+1))
+	echo $minute
+done
+
+
+
