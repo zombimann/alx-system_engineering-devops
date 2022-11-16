@@ -4,7 +4,7 @@
 #+ every item by removing every character before and
 #+ including the dash
 
-dirlist=($(ls *))
+dirlist=("$(ls *)")
 
 for i in "${dirlist[@]}"
 do
