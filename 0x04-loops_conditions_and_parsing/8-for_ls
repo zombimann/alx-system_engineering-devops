@@ -8,6 +8,6 @@ dirlist=(`ls *`)
 
 for i in "${dirlist[@]}"
 do
-    echo "$(echo "$i" | tr -d "[0-9]-")"
+    echo "$(echo "$i" | sed -r 's/[0-9]-//')"
 done
 
