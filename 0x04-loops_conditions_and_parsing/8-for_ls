@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#  8-for_ls: This script displays the content s of the
+#+ current directory in lost format after formatting
+#+ every item by removing every character before and
+#+ including the dash
+
+IFS='-'
+dirlist=(`ls *`)
+
+for i in ${dirlist[*]}
+do
+	 echo "$i"[1]
+done	 
