@@ -8,6 +8,6 @@ dirlist=("$(ls ./*)")
 
 for i in "${dirlist[@]}"
 do
-    echo "$(echo "$i" | sed -r 's/.*-//')"
+    echo "$(echo "$i" | sed -r 's#'\.[^.]*-$'##')"
 done
 
