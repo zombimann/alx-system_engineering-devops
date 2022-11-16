@@ -4,10 +4,10 @@
 #+ every item by removing every character before and
 #+ including the dash
 
-IFS='-'
 dirlist=(`ls *`)
 
-for i in ${dirlist[*]}
+for i in "${dirlist[@]}"
 do
-	 echo "$i"[1]
-done	 
+    echo "$(echo "$i" | tr -d "[0-9]-")"
+done
+
