@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#  101-tell_the_story_of_passwd: This script displays the contents of
+#+ /etc/passwd using 'while' loop and 'IFS'
+
+IFS=":"
+
+while read -r usrname psswrd uid gid usridinfo homedir shellcmd
+do
+    echo " The user $usrname is part of the $gid gang, lives in$homedir and rides $shellcmd. ${uid}'s place is protected by the passcode $psswrd, more info about the user here: $usridinfo"
+done < /etc/passwd
+    
