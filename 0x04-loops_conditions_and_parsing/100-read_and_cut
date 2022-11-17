@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
+# shellcheck disable=SC2002
 #  100-read_and_cut: This script displays the formatted content of file
 #+ /etc/passwd
 
