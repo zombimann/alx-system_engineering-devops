@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC2034
+#  100-read_and_cut: This script displays the formatted content of file
+#+ /etc/passwd
+
+# mylst="cat /etc/passwd"
+
+# get array length
+# arrlen=${#mylst[@]}
+
+# while loop through the list and display formatted information
+# i=0
+IFS=":"
+cat /etc/passwd | while read -r usrname _pword uid _groupid _fullname usrhomedir _loginshell ; do echo "$usrname:$uid:$usrhomedir" ; done
+
+
+
