@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#  10-fizzbuzz: Thos script prints out 1 to 100,7 with
+#+ special requirements
+
+for i in {1..100..1}
+do
+    if [ $((i % 3)) -eq 0 ] && [ $((i % 5)) -eq 0 ]
+    then
+	echo fizzbuzz
+    elif [ $(($i % 3)) -eq 0 ]
+    then
+	echo fizz
+    elif [ $(($i % 5)) -eq 0 ]
+    then
+	echo buzz
+    else
+	echo $i
+    fi
+done
+
+
