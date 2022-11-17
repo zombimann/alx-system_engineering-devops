@@ -12,7 +12,7 @@
 # while loop through the list and display formatted information
 # i=0
 IFS=":"
-while read -r usrname _pword uid _groupid _fullname usrhomedir _loginshell ; do echo "$usrname:$uid:$usrhomedir" ; done < /etc/passwd
+cat /etc/passwd | while read -r usrname _pword uid _groupid _fullname usrhomedir _loginshell ; do echo "$usrname:$uid:$usrhomedir" ; done
 
 
 
