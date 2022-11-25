@@ -6,6 +6,6 @@ IFS=":"
 
 while read -r usrname psswrd uid gid usridinfo homedir shellcmd
 do
-    echo "The user $usrname is part of the $gid gang, lives in$homedir and rides $shellcmd. ${uid}'s place is protected by the passcode $psswrd, more info about the user here: $usridinfo"
+    echo "The user $usrname is part of the $gid gang, lives in $homedir and rides $shellcmd. ${uid}'s place is protected by the passcode $psswrd, more info about the user here: $usridinfo"
 done < /etc/passwd
     
